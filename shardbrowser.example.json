@@ -1,0 +1,6 @@
+{
+  "endpoint": "http://127.0.0.1:40325",
+  "token": "",
+  "platform": "Windows",
+  "timeoutMs": 20000
+}

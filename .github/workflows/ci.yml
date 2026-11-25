@@ -1,0 +1,31 @@
+name: Tests
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+# Cancel previous CI runs when a new push lands on the same branch.
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      # Browser tests are skipped without a locally installed Camoufox.
+      # Run npm run browser:install and npm test locally for browser coverage.
+      # --test-timeout=30000 kills any hanging test after 30s instead of
+      # waiting for GitHub's 6-hour job timeout.
+      - run: npm test -- --test-timeout=30000

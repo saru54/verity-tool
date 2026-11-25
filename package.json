@@ -1,0 +1,43 @@
+{
+  "name": "verity-tool",
+  "version": "1.0.0",
+  "description": "Extensible verification workflow workbench with Web UI, queue management, and browser automation adapters",
+  "private": true,
+  "main": "src/index.js",
+  "scripts": {
+    "test": "node --experimental-test-module-mocks --test --test-force-exit",
+    "start": "node src/cli.js",
+    "web": "node src/web/server.js",
+    "status": "node src/cli.js --status",
+    "submit": "node src/cli.js --submit",
+    "browser:install": "node scripts/install-browser.js"
+  },
+  "keywords": [
+    "nodejs",
+    "playwright",
+    "camoufox",
+    "workflow",
+    "automation"
+  ],
+  "author": "saru54",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saru54/verity-tool.git"
+  },
+  "homepage": "https://github.com/saru54/verity-tool#readme",
+  "bugs": {
+    "url": "https://github.com/saru54/verity-tool/issues"
+  },
+  "license": "ISC",
+  "type": "module",
+  "engines": {
+    "node": ">=22.15"
+  },
+  "dependencies": {
+    "camoufox": "^0.5.9",
+    "opentype.js": "^2.0.0",
+    "playwright-core": "^1.62.1",
+    "proxy-chain": "^3.0.1",
+    "undici": "^7.30.1"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "web": { "concurrency": 1 },
+  "app": "sheerid",
+  "proxy": null,
+  "proxyProvider": "nodemaven",
+  "nodemaven": {
+    "host": "gate.nodemaven.com",
+    "port": 8080,
+    "username": "NODEMAVEN_USERNAME",
+    "password": "NODEMAVEN_PASSWORD",
+    "filter": "medium",
+    "ipv4Only": true
+  },
+  "dataimpulse": {
+    "host": "gw.dataimpulse.com",
+    "port": 10000,
+    "username": "DATAIMPULSE_USERNAME",
+    "password": "DATAIMPULSE_PASSWORD"
+  },
+  "ipQuality": {
+    "enabled": true,
+    "threshold": 80,
+    "maxRetries": 5,
+    "requireResidential": true,
+    "fallbackCountries": ["ca", "de", "gb", "fr", "au"]
+  },
+  "browser": {
+    "engine": "camoufox",
+    "headless": false,
+    "keepOpen": true,
+    "autoFill": true,
+    "fingerprintId": ""
+  },
+  "shardBrowser": {
+    "endpoint": "http://127.0.0.1:40325",
+    "token": "",
+    "platform": "Windows",
+    "timeoutMs": 20000,
+    "configFile": ""
+  },
+  "materials": { "enabled": true, "reuse": true, "kind": "enrollment" },
+  "document": { "path": "", "url": "" },
+  "timeouts": { "apiMs": 20000, "actionMs": 15000, "navigationMs": 60000, "readyMs": 120000, "humanMs": 180000, "resultMs": 45000 },
+  "interaction": {
+    "keyDelayMs": { "min": 40, "max": 120 },
+    "fieldDelayMs": { "min": 500, "max": 1200 },
+    "submitDelayMs": { "min": 1000, "max": 2000 }
+  },
+  "artifactsDir": ".runs",
+  "data": {
+    "universityId": "",
+    "country": "United States",
+    "countryCode": "US",
+    "organization": { "name": "", "optionText": "", "emailDomain": "mit.edu" }
+  },
+  "selectors": {}
+}

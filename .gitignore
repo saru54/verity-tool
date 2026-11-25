@@ -1,0 +1,15 @@
+node_modules/
+.env
+.env.*
+!.env.example
+!deploy/.env.web.example
+.runs/
+documents/
+config/*.local.json
+shardbrowser.json
+*.log
+*.tmp
+.tmp-*
+preview/
+examples/*_preview.png
+examples/preview.png
